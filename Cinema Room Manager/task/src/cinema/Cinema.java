@@ -26,7 +26,6 @@ public class Cinema {
         int counterHeader = 0;
 
         for (counterHeader = 0; counterHeader < header.length; counterHeader++) {
-            int printHeader = counterHeader;
             System.out.print(header[counterHeader] + " ");
         }
 
@@ -36,7 +35,7 @@ public class Cinema {
 
         for (counterData = 0; counterData < data.length; counterData++) {
             int printData = counterData;
-            System.out.print(data[counterData] + " ");
+            // System.out.print(data[counterData] + " ");
         }
 
     }
