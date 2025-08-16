@@ -1,10 +1,14 @@
 package cinema;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Cinema {
     public static void main(String[] args) {
-        // Let's declare some vars and arrays to manage this output.
+        // open scanner
+        Scanner input = new Scanner(System.in);
+
+        // vars
         String location = "Cinema:";
         String[] header = {" ", "1", "2", "3", "4", "5", "6", "7", "8"};
         String[][] data = {
@@ -17,24 +21,36 @@ public class Cinema {
                 {"7", "S", "S", "S", "S", "S", "S", "S", "S"}
         };
 
-        // print location
+        // ask input here
+        System.out.println("Enter the number of rows:");
+        int rows = input.nextInt();
+        System.out.println("Enter the number of seats in each row:");
 
-        System.out.println(location);
+        // calculate logic here
 
-        // let's print the header - DONE
 
+        // close scanner
+        input.close();
+
+
+
+
+
+
+
+                /* print header method
         for (int i = 0; i < header.length; i++) {
             System.out.print(header[i] + " ");
         }
+        */
 
-        // let's print the body of the table - DONE
-
+        /* print body method
         for (int i = 0; i < data.length; i++) {
             System.out.println();
             for (int j = 0; j < data[i].length; j++){
                 System.out.print(data[i][j] + " ");
             }
         }
-
+        */
     }
 }
