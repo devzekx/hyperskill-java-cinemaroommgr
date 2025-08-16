@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class Cinema {
     public static void main(String[] args) {
         // Let's declare some vars and arrays to manage this output.
-        String cinema = "Cinema:";
+        String location = "Cinema:";
         String[] header = {" ", "1", "2", "3", "4", "5", "6", "7", "8"};
         String[][] data = {
                 {"1", "S", "S", "S", "S", "S", "S", "S", "S"},
@@ -17,25 +17,23 @@ public class Cinema {
                 {"7", "S", "S", "S", "S", "S", "S", "S", "S"}
         };
 
-        // figure out formatting to print a 2d array
-        System.out.println(Arrays.toString(data[0]));
+        // print location
 
-
+        System.out.println(location);
 
         // let's print the header - DONE
-        int counterHeader = 0;
 
-        for (counterHeader = 0; counterHeader < header.length; counterHeader++) {
-            System.out.print(header[counterHeader] + " ");
+        for (int i = 0; i < header.length; i++) {
+            System.out.print(header[i] + " ");
         }
 
-        // let's print the body of the table - TODO
+        // let's print the body of the table - DONE
 
-        int counterData = 0;
-
-        for (counterData = 0; counterData < data.length; counterData++) {
-            int printData = counterData;
-            // System.out.print(data[counterData] + " ");
+        for (int i = 0; i < data.length; i++) {
+            System.out.println();
+            for (int j = 0; j < data[i].length; j++){
+                System.out.print(data[i][j] + " ");
+            }
         }
 
     }
