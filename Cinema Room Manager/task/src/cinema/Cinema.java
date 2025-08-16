@@ -16,19 +16,28 @@ public class Cinema {
                 {"6", "S", "S", "S", "S", "S", "S", "S", "S"},
                 {"7", "S", "S", "S", "S", "S", "S", "S", "S"}
         };
-        System.out.println(cinema);
-        // figure out formatting to print
 
+        // figure out formatting to print a 2d array
+        System.out.println(Arrays.toString(data[0]));
+
+
+
+        // let's print the header - DONE
         int counterHeader = 0;
-        int counterData = 0;
 
         for (counterHeader = 0; counterHeader < header.length; counterHeader++) {
             int printHeader = counterHeader;
             System.out.print(header[counterHeader] + " ");
         }
+
+        // let's print the body of the table - TODO
+
+        int counterData = 0;
+
         for (counterData = 0; counterData < data.length; counterData++) {
             int printData = counterData;
             System.out.print(data[counterData] + " ");
         }
+
     }
 }
