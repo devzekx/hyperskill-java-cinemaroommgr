@@ -1,6 +1,5 @@
 package cinema;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Cinema {
@@ -9,6 +8,43 @@ public class Cinema {
         Scanner input = new Scanner(System.in);
 
         // vars
+
+
+        // ask input here
+        System.out.println("Enter the number of rows:");
+        int rows = input.nextInt();
+        System.out.println("Enter the number of seats in each row:");
+        int seats = input.nextInt();
+
+        // calculate logic here
+        int totalSeats = seats * rows;
+
+        if (totalSeats <= 60) {
+            int priceSmallRoom = totalSeats * 10;
+            System.out.println("$" + priceSmallRoom);
+        } else if (rows % 2 == 0) {
+            int firstHalfEven = (totalSeats / 2) * 10;
+            int secondHalfEven = (totalSeats / 2) * 8;
+            int totalEven = firstHalfEven + secondHalfEven;
+            System.out.println("$" + totalEven);
+        } else {
+            System.out.println("do later");
+        }
+
+
+        // close scanner
+        input.close();
+
+
+
+
+
+
+
+
+
+
+        /*
         String location = "Cinema:";
         String[] header = {" ", "1", "2", "3", "4", "5", "6", "7", "8"};
         String[][] data = {
@@ -20,23 +56,7 @@ public class Cinema {
                 {"6", "S", "S", "S", "S", "S", "S", "S", "S"},
                 {"7", "S", "S", "S", "S", "S", "S", "S", "S"}
         };
-
-        // ask input here
-        System.out.println("Enter the number of rows:");
-        int rows = input.nextInt();
-        System.out.println("Enter the number of seats in each row:");
-
-        // calculate logic here
-
-
-        // close scanner
-        input.close();
-
-
-
-
-
-
+         */
 
                 /* print header method
         for (int i = 0; i < header.length; i++) {
