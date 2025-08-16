@@ -1,5 +1,4 @@
 package cinema;
-
 import java.util.Scanner;
 
 public class Cinema {
@@ -8,7 +7,7 @@ public class Cinema {
         Scanner input = new Scanner(System.in);
 
         // vars
-
+        String income = "Total income:";
 
         // ask input here
         System.out.println("Enter the number of rows:");
@@ -21,27 +20,20 @@ public class Cinema {
 
         if (totalSeats <= 60) {
             int priceSmallRoom = totalSeats * 10;
+            System.out.println(income);
             System.out.println("$" + priceSmallRoom);
-        } else if (rows % 2 == 0) {
-            int firstHalfEven = (totalSeats / 2) * 10;
-            int secondHalfEven = (totalSeats / 2) * 8;
-            int totalEven = firstHalfEven + secondHalfEven;
-            System.out.println("$" + totalEven);
         } else {
-            System.out.println("do later");
+            int frontRows = rows / 2;
+            int backRows = rows - frontRows;
+            int priceFrontRows = frontRows * seats * 10;
+            int priceBackRows = backRows * seats * 8;
+            int priceOdd = priceFrontRows + priceBackRows;
+            System.out.println(income);
+            System.out.println("$" + priceOdd);
         }
-
 
         // close scanner
         input.close();
-
-
-
-
-
-
-
-
 
 
         /*
